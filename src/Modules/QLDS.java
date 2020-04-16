@@ -25,10 +25,9 @@ public class QLDS  implements IQLDS{
     public void xoa(String ten) {
          for(int i=0; i < dsCN.size(); i++)
         {   
-            if(dsCN.get(i).hoTen == ten)
+            if(dsCN.get(i).getHoTen() == ten)
                 dsCN.remove(dsCN.get(i));
         }
-
     }
 
     @Override

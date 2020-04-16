@@ -12,28 +12,31 @@ import java.util.ArrayList;
  * @author asus
  */
 public class LopHoc {
-    ArrayList<HocSinh> dsHS = new ArrayList<HocSinh>(); 
-    ArrayList<GiaoVien> dsGV = new ArrayList<GiaoVien>();
+    QLDS qldsHS = new QLDS();
+    QLDS qldsGVHD = new QLDS();
+    public QLDS getQldsHS() {
+        return qldsHS;
+    }
+
+    public QLDS getQldsGVHD() {
+        return qldsGVHD;
+    }
     
     public LopHoc() {
+     
     }
     
     public void themHocSinh(HocSinh hs){
-        dsHS.add(hs);
+        qldsHS.them(hs);
     }
     public void themGVGD(GiaoVien gv){
-        dsGV.add(gv);
+        qldsGVHD.them(gv);
     }
     public void inDSHS(){
-        for(var x: dsHS)
-        {
-            System.out.println(x.HienThi());
-        }
+        qldsHS.inDS();
     }
     public void inDSGVHD(){
-        for(var x: dsGV)
-        {
-            System.out.println(x.HienThi());
-        }
+        qldsGVHD.inDS();
     }
+    
 }

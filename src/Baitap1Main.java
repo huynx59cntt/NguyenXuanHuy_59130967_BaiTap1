@@ -1,10 +1,10 @@
 
-import Modules.CaNhan;
 import Modules.GiaoVien;
 import Modules.HocSinh;
 import Modules.LopHoc;
 import Modules.QLDS;
-
+import Modules.CaNhan;
+        
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -42,26 +42,11 @@ public class Baitap1Main {
         lh1.inDSHS();
         System.out.println("Danh Sách Giáo Viên");
         lh1.inDSGVHD();
-        
-       //thêm cá nhân 
-       System.out.println("---------------------------------------");
-       System.out.println("Thêm Danh Sách");
-        CaNhan cn1 = new HocSinh("10A1", "Rubik", "Trần Văn Cảnh", 18, "Gò Vấp", "0123241");
-        CaNhan cn2 = new HocSinh("10A2", "Bơi", "Lê Văn Luyênh", 18, "Gò Ấp", "912313");
-        CaNhan cn3 = new GiaoVien("Vật Lý", "Toán", "Trần Văn Lượng", 54, "Tân An","0127753");
-        
-        QLDS qldsHS = new QLDS();
-        QLDS qldsGVHD = new QLDS();
-        
-        qldsHS.them(cn1);
-        qldsGVHD.them(cn3);
-        
-        qldsHS.inDS();
-        qldsGVHD.inDS(); 
-        //xóa
-        System.out.println("SDanh sách sau khi xóa: ");
-        qldsHS.xoa("Trần Văn Cảnh");
-        qldsHS.inDS();
-        qldsGVHD.inDS(); 
+         
+//        //xóa
+        System.out.println("\n\nDanh sách sau khi xóa: ");
+        lh1.getQldsHS().xoa("Nguyen Xuan Huy");       
+        lh1.inDSHS();
+        lh1.inDSGVHD();
     }
 }
